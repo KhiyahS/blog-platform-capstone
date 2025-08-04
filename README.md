@@ -1,21 +1,67 @@
 
-Frontend Development Plan
-Choose a Frontend Framework:
-Depending on your preference, you can use any of the following frontend frameworks:
+1. Project Setup
+If not already done, finalize the React setup (or Preact + TypeScript) with routing and basic configuration.
 
-React.js (recommended for dynamic and scalable web apps).
+2. Authentication Flow
+Add a Protected Route to ensure that users can only access certain pages (like creating posts) when logged in.
 
-Vue.js (great for quick setups and progressive enhancement).
+Create a logout feature to allow users to log out and clear their session.
 
-Angular (if you're working on large enterprise-grade applications).
+3. Post List & Details
+Post List Page (HomePage) has been created, but you may want to:
 
-Set Up Your Frontend Development Environment:
-If you decide to use React, you can quickly create a React app using Create React App.
-Frontend Development: You can begin working on the frontend (React, Vue, etc.)
+Add pagination or infinite scrolling for post lists.
 
-Mocking API Requests: If your backend isn't ready yet, you can mock API requests or use the local backend during development.
+Display more details for each post by linking to a Post Details page (using routes).
 
-Deployment: Once you're happy with the frontend, deploy it to a platform like Netlify, Vercel, or GitHub Pages.
+Implement a filtering/search feature for the posts.
+
+4. Post Details Page
+Create a Post Detail page to view the full content of a post when clicked.
+
+Include the Comment Section on this page to allow users to comment on individual posts.
+
+5. Comment Section
+CommentForm: Allow users to add comments to posts.
+
+CommentDisplay: Display the list of comments for each post. You may want to structure the comments with nested replies.
+
+6. State Management
+Global State Management using React Context API for authentication (and possibly post/task state) to share the user info and posts across components.
+
+Handling API state like loading, success, and error messages globally for all components.
+
+7. UI Components
+You might want to create reusable UI components like buttons, modals, forms, and error/success alerts.
+
+Add a Navbar with links to Home, Create Post, Login, etc.
+
+8. Styling & Responsiveness
+Finalize styling using TailwindCSS to ensure that the app is responsive and looks polished across devices (mobile, tablet, desktop).
+
+Test on different screen sizes and refine the layout.
+
+9. Error Handling
+Add error handling for failed API requests (e.g., posts, login, comments). This includes displaying loading states and error messages in the UI.
+
+10. Testing
+Test the entire frontend flow (authentication, post creation, commenting) to ensure it works smoothly.
+
+Unit testing for key components like the LoginForm, PostForm, and PostList using tools like Jest and React Testing Library.
+
+11. Deployment
+Once everything is complete, deploy the frontend to Render (or Netlify, Vercel) as a static site.
+
+Rough Estimation of Work Left:
+Frontend Routing (Protected Routes, Navigation, Post Details) – 3-4 hours
+
+Comment Section (Form + Display) – 2-3 hours
+
+State Management (Context API for Authentication) – 2 hours
+
+UI Components & Responsiveness – 2-3 hours
+
+Final Testing & Deployment – 2-3 hours
 
 project-management/
 │
