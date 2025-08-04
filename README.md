@@ -1,12 +1,29 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+project-management/
+│
+├── config/
+│   └── db.js                    # MongoDB connection setup
+│
+├── controllers/
+│   └── authController.js         # Handle user registration and login
+│   └── projectController.js      # Handle CRUD operations for projects
+│   └── taskController.js         # Handle CRUD operations for tasks
+│
+├── models/
+│   └── User.js                  # User schema and model
+│   └── Project.js               # Project schema and model
+│   └── Task.js                  # Task schema and model
+│
+├── routes/
+│   └── authRoutes.js            # Routes for user authentication
+│   └── projectRoutes.js         # Routes for project CRUD operations
+│   └── taskRoutes.js            # Routes for task CRUD operations
+│
+├── middleware/
+│   └── authMiddleware.js        # JWT authentication middleware
+│   └── authorizationMiddleware.js # Ownership-based authorization middleware
+│
+├── .env                         # Environment variables (e.g., MongoDB URI, JWT secret)
+├── node_modules/                # NPM packages
+├── package.json                 # NPM dependencies and scripts
+├── server.js                    # Main Express app entry point
+└── README.md                    # Project documentation
